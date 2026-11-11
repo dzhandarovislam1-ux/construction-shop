@@ -1,59 +1,32 @@
-# MyAngularApp
+# Строймаг — учёт для строительного магазина
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+Демо: https://dzhandarovislam1-ux.github.io/construction-shop/
 
-## Development server
+Простая система вместо тетради: товары и остатки, касса, долги покупателей,
+отчёт за день и QR-ценники.
 
-To start a local development server, run:
+## Возможности
 
-```bash
-ng serve
-```
+- **Товары** — каталог, поиск, категории, «заканчиваются», приход на склад.
+- **Касса** — поиск, сканирование QR и штрихкодов, оплата наличными, картой или в долг.
+- **Долги** — кто сколько должен, приём оплаты, история.
+- **Продажи** — выручка, наличные, карта, прибыль за день, отмена продажи.
+- **Ценники** — печать QR-ценников.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Данные хранятся в браузере (localStorage). Резервная копия — в «Настройках».
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Запуск
 
 ```bash
-ng generate --help
+npm install
+npm start        # http://localhost:4200
+npm test         # тесты
 ```
 
-## Building
-
-To build the project run:
+## Публикация демо на GitHub Pages
 
 ```bash
-ng build
+npx ng build --base-href /construction-shop/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Содержимое `dist/my-angular-app/browser` выкладывается в ветку `gh-pages`.

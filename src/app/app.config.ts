@@ -1,10 +1,11 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding, withHashLocation } from '@angular/router';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
-  ]
+    // Hash-адреса (/#/p/123) работают на любом статическом хостинге без настройки сервера.
+    provideRouter(routes, withHashLocation(), withComponentInputBinding()),
+  ],
 };
