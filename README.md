@@ -29,4 +29,7 @@ npm test         # тесты
 npx ng build --base-href /construction-shop/
 ```
 
+В Git Bash на Windows добавьте `MSYS_NO_PATHCONV=1` перед командой, иначе адрес
+`/construction-shop/` подменится на путь Windows и сайт откроется пустым.
+
 Содержимое `dist/my-angular-app/browser` выкладывается в ветку `gh-pages`.
